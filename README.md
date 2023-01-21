@@ -10,6 +10,8 @@ Provide Docker images for SuperCollider in which sclang and scsynth can be run.
 
 **Currently this is primarily used for CI testing**, yet it is possible to use the synthesis capabilities of sclang as well.
 
+I build these images manually on MacOS x64.
+
 ## Quickstart
 
 Start an interactive sclang interpreter in a docker container.
@@ -28,7 +30,9 @@ Tag | Base-Image | Comment
 
 ## Usage
 
-### Realtime scheduling
+### Audio streaming
+
+This is part of another project which will be open sourced soon.
 
 ### Run tests in a container
 
@@ -36,11 +40,9 @@ Quarks can be mounted into the `/usr/local/share/SuperCollider/Extensions` folde
 
 ```shell
 docker run -v <path_to_your_quark>:/usr/local/share/SuperCollider/Extensions -it sc-docker
-/usr/local/share/SuperCollider/Extensions
 ```
 
-### Test a Quark with GitHub Actions
-
+After this simply run the tests, e.g. `TestMyLib.run`.
 
 ### Build locally
 
