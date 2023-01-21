@@ -2,6 +2,10 @@
 
 > SuperCollider in a container
 
+[Docker Hub Site](https://hub.docker.com/r/capitalg/supercollider/tags)
+
+[GitHub repository](https://github.com/capital-G/sc-docker)
+
 Provide Docker images for SuperCollider in which sclang and scsynth can be run.
 
 **Currently this is primarily used for CI testing**, yet it is possible to use the synthesis capabilities of sclang as well.
@@ -11,7 +15,7 @@ Provide Docker images for SuperCollider in which sclang and scsynth can be run.
 Start an interactive sclang interpreter in a docker container.
 
 ```shell
-docker run -it capitalg/supercollider:tagname
+docker run -it capitalg/supercollider:3.12
 ```
 
 Exit out of sclang by entering `cmd + d`.
