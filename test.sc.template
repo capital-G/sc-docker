@@ -1,0 +1,23 @@
+#!/bin/sh
+
+cat << EOF
+
+var results = "TestComplex".split($,).collect({|test|
+	"run %".format(test);
+	
+	x = "%.prRunAllTestMethods(true)".format(test).interpret;
+	x.report;
+	x;
+});
+
+var failures = results.collect({|x| x.failures}).flat;
+
+if(failures.size==0, {
+	"Tests were successful".postln;
+	0.exit;
+}, {
+	1.exit;
+});
+
+
+EOF
